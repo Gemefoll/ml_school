@@ -4,7 +4,7 @@ __generated_with = "0.24.1"
 app = marimo.App(
     width="full",
     layout_file="layouts/task_numpy.grid.json",
-    auto_download=["html"],
+    auto_download=["html", "ipynb"],
 )
 
 
