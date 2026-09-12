@@ -1,0 +1,30 @@
+[project]
+name = "ml-school"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Gemefoll", email = "egor.fefilov.2009@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "marimo>=0.24.0",
+    "matplotlib>=3.11.1",
+    "nbformat>=5.11.1",
+    "numpy>=2.4.6",
+    "pillow>=12.3.0",
+    "plotly>=7.0.0",
+    "python-lsp-server>=1.15.0",
+    "ruff>=0.16.6",
+    "scipy>=1.17.1",
+]
+
+[project.scripts]
+ml-school = "ml_school:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.marimo.runtime]
+output_max_bytes = 1_000_000_000

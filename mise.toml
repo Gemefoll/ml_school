@@ -1,0 +1,6 @@
+[tools]
+python = "latest"
+uv = "latest"
+[env]
+_.python.venv = { path = ".venv", create = true }
+MARIMO_OUTPUT_MAX_BYTES = "1_000_000_000"
