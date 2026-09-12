@@ -1,7 +1,11 @@
 import marimo
 
 __generated_with = "0.24.1"
-app = marimo.App(width="full", layout_file="layouts/task_numpy.grid.json")
+app = marimo.App(
+    width="full",
+    layout_file="layouts/task_numpy.grid.json",
+    auto_download=["html"],
+)
 
 
 @app.cell
@@ -271,7 +275,7 @@ def _(mo):
 @app.cell
 def _(np):
     from PIL import Image
-    kar = Image.open("/home/gemefoll/Pictures/Render/NikitaIsTakingPhotos.jpg")
+    kar = Image.open("/home/gemefoll/Downloads/828145703.jpeg")
     img = np.asarray(kar.convert("RGB"))
     kar
     return Image, img
