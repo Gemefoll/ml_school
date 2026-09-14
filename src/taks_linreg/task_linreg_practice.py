@@ -1,11 +1,12 @@
 import marimo
 
-__generated_with = "0.24.1"
-app = marimo.App()
+__generated_with = "0.24.2"
+app = marimo.App(auto_download=["ipynb"])
 
 with app.setup:
     import marimo as mo
     import pandas as pd
+    import sklearn
 
 
 @app.cell(hide_code=True)
@@ -67,7 +68,7 @@ def _():
 
 @app.cell
 def _():
-    dat = pd.read_csv("/home/gemefoll/ml_school/taks_linreg/task/data.csv")
+    dat = pd.read_csv("src/taks_linreg/data.csv")
     bad = dat["plans_universitypast_failures"].to_numpy()
     dat["plans_university"] = abs(bad) // 10 * bad // abs(bad)
     dat["past_failures"] = abs(bad) % 10
@@ -91,7 +92,8 @@ def _():
 
 @app.cell
 def _(dat):
-    dat.mean(), dat[dat.isnull()]
+    dat.fillna(dat.mean(), inplace=True)
+    dat.isnull()
     return
 
 
@@ -107,10 +109,12 @@ def _():
 
 
 @app.cell
-def _():
-    # Your code here
-    # ...
-    return
+def _(dat):
+    ndat = dat
+    ndat /= dat.std()
+    ndat -= ndat.mean()
+    ndat.mean(), ndat.std()
+    return (ndat,)
 
 
 @app.cell(hide_code=True)
@@ -129,9 +133,10 @@ def _():
 
 
 @app.cell
-def _():
-    # Your code here
-    # ...
+def _(ndat):
+    dans = pd.read_csv("src/taks_linreg/scores.csv", names=["ans"])
+    model = sklearn.linear_model.SGDRegressor()
+    sklearn.model_selection.cross_validate(model, X=ndat, y=dans, cv=4)
     return
 
 

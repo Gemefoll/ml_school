@@ -17,6 +17,7 @@ dependencies = [
     "plotly>=7.0.0",
     "python-lsp-server>=1.15.0",
     "ruff>=0.16.6",
+    "scikit-learn>=1.9.1",
     "scipy>=1.17.1",
 ]
 
