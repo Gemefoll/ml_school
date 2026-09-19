@@ -6,7 +6,9 @@ app = marimo.App(auto_download=["ipynb"])
 with app.setup:
     import marimo as mo
     import pandas as pd
+    import numpy as np
     import sklearn
+    import matplotlib.pyplot as plt
 
 
 @app.cell(hide_code=True)
@@ -110,11 +112,22 @@ def _():
 
 @app.cell
 def _(dat):
-    ndat = dat
-    ndat /= dat.std()
+    ndat = dat.copy()
+    ndat /= ndat.std()
     ndat -= ndat.mean()
-    ndat.mean(), ndat.std()
     return (ndat,)
+
+
+@app.cell
+def _(ndat):
+    ndat.mean().round()
+    return
+
+
+@app.cell
+def _(ndat):
+    ndat.std().round()
+    return
 
 
 @app.cell(hide_code=True)
@@ -134,10 +147,10 @@ def _():
 
 @app.cell
 def _(ndat):
-    dans = pd.read_csv("src/taks_linreg/scores.csv", names=["ans"])
+    dans = pd.read_csv("src/taks_linreg/scores.csv", names=["ans"]).to_numpy().ravel()
     model = sklearn.linear_model.SGDRegressor()
-    sklearn.model_selection.cross_validate(model, X=ndat, y=dans, cv=4)
-    return
+    sklearn.model_selection.cross_validate(model, X=ndat, y=dans, cv=4, scoring="neg_mean_squared_error")
+    return (dans,)
 
 
 @app.cell(hide_code=True)
@@ -156,9 +169,28 @@ def _():
 
 
 @app.cell
-def _():
-    # Your code here
-    # ...
+def _(dat):
+    att = pd.read_csv("src/taks_linreg/attendance.csv",sep=";").replace("+", 1).fillna(0)
+    ss = np.zeros(len(dat))
+    ss[np.genfromtxt("src/taks_linreg/school_support.txt", dtype=np.uint)] = 1
+    dat2 = dat.copy()
+    dat2["school_support"] = ss
+    dat2.join(att, how="left")
+    return (dat2,)
+
+
+@app.cell
+def _(dat2):
+    ndat2 = dat2.copy()
+    ndat2 /= ndat2.std()
+    ndat2 -= ndat2.mean()
+    return (ndat2,)
+
+
+@app.cell
+def _(dans, ndat2):
+    model2 = sklearn.linear_model.SGDRegressor(max_iter=10000)
+    sklearn.model_selection.cross_validate(model2, X=ndat2, y=dans, cv=4, scoring="neg_mean_squared_error")
     return
 
 
@@ -181,9 +213,27 @@ def _():
 
 
 @app.cell
-def _():
-    # Your code here
-    # ...
+def _(dat2):
+    dat3 = dat2.copy()
+    dat3.loc[dat3["traveltime"] > 4, "traveltime"] = dat3["traveltime"].median()
+    dat3.loc[dat3["age"] > 100, "age"] = dat3["age"].median()
+    dat3.hist(figsize=(20, 20))
+    plt.show()
+    return (dat3,)
+
+
+@app.cell
+def _(dat3):
+    ndat3 = dat3.copy()
+    ndat3 /= ndat3.std()
+    ndat3 -= ndat3.mean()
+    return (ndat3,)
+
+
+@app.cell
+def _(dans, ndat3):
+    model3 = sklearn.linear_model.SGDRegressor(max_iter=10000)
+    sklearn.model_selection.cross_validate(model3, X=ndat3, y=dans, cv=4, scoring="neg_mean_squared_error")
     return
 
 
@@ -215,23 +265,16 @@ def _():
     return
 
 
-app._unparsable_cell(
-    r"""
-    import sklearn
-    from sklearn import linear_model
-    regression = linear_model.LinearRegression().fit(data, result) #create model and train it
-    prediction = #calculate prediction for one object for vector x
-    error = (prediction - y)**2 #simple error - square error
-    """,
-    name="_"
-)
-
-
 @app.cell
-def _():
-    # Your code here
-    # ...
-    return
+def _(dans, ndat3):
+    regression = sklearn.linear_model.LinearRegression().fit(ndat3, dans)
+    prediction = regression.predict(ndat3)
+    error = (prediction - dans)**2
+    ndat4 = ndat3[error <= 2000]
+    dans4 = dans[error <= 2000]
+    plt.hist(error)
+    plt.show()
+    return dans4, ndat4
 
 
 @app.cell(hide_code=True)
@@ -245,9 +288,9 @@ def _():
 
 
 @app.cell
-def _():
-    # Your code here
-    # ...
+def _(dans4, ndat4):
+    model4 = sklearn.linear_model.SGDRegressor(max_iter=10000)
+    sklearn.model_selection.cross_validate(model4, X=ndat4, y=dans4, cv=4, scoring="neg_mean_squared_error")
     return
 
 

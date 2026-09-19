@@ -14,7 +14,6 @@ dependencies = [
     "numpy>=2.4.6",
     "pandas>=3.0.5",
     "pillow>=12.3.0",
-    "plotly>=7.0.0",
     "python-lsp-server>=1.15.0",
     "ruff>=0.16.6",
     "scikit-learn>=1.9.1",
