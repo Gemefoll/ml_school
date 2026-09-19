@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.24.2"
-app = marimo.App(auto_download=["ipynb"])
+app = marimo.App(width="full", auto_download=["ipynb"])
 
 with app.setup:
     import marimo as mo
@@ -149,7 +149,7 @@ def _():
 def _(ndat):
     dans = pd.read_csv("src/taks_linreg/scores.csv", names=["ans"]).to_numpy().ravel()
     model = sklearn.linear_model.SGDRegressor()
-    sklearn.model_selection.cross_validate(model, X=ndat, y=dans, cv=4, scoring="neg_mean_squared_error")
+    print(*sklearn.model_selection.cross_validate(model, X=ndat, y=dans, cv=4, scoring="neg_mean_squared_error")["test_score"], sep="\n")
     return (dans,)
 
 
@@ -190,7 +190,7 @@ def _(dat2):
 @app.cell
 def _(dans, ndat2):
     model2 = sklearn.linear_model.SGDRegressor(max_iter=10000)
-    sklearn.model_selection.cross_validate(model2, X=ndat2, y=dans, cv=4, scoring="neg_mean_squared_error")
+    print(*sklearn.model_selection.cross_validate(model2, X=ndat2, y=dans, cv=4, scoring="neg_mean_squared_error")["test_score"], sep="\n")
     return
 
 
@@ -233,7 +233,7 @@ def _(dat3):
 @app.cell
 def _(dans, ndat3):
     model3 = sklearn.linear_model.SGDRegressor(max_iter=10000)
-    sklearn.model_selection.cross_validate(model3, X=ndat3, y=dans, cv=4, scoring="neg_mean_squared_error")
+    print(*sklearn.model_selection.cross_validate(model3, X=ndat3, y=dans, cv=4, scoring="neg_mean_squared_error")["test_score"], sep="\n")
     return
 
 
@@ -290,7 +290,7 @@ def _():
 @app.cell
 def _(dans4, ndat4):
     model4 = sklearn.linear_model.SGDRegressor(max_iter=10000)
-    sklearn.model_selection.cross_validate(model4, X=ndat4, y=dans4, cv=4, scoring="neg_mean_squared_error")
+    print(*sklearn.model_selection.cross_validate(model4, X=ndat4, y=dans4, cv=4, scoring="neg_mean_squared_error")["test_score"], sep="\n")
     return
 
 
