@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.24.2"
-app = marimo.App(width="full")
+app = marimo.App(width="full", auto_download=["ipynb"])
 
 with app.setup:
     import marimo as mo
@@ -50,7 +50,7 @@ def _(data, dvt):
         groups[v] = t
         for i in (np.r_[dvt[dvt["item_from"] == v]["item_to"], dvt[dvt["item_to"] == v]["item_from"]] - 1):
             dfs(i)
-        
+    
     for i in range(500):
         if groups[i] == -1:
             dfs(i)
