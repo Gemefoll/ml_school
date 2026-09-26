@@ -51,7 +51,7 @@
         {
           "type": "data",
           "data": {
-            "text/html": "<marimo-ui-element object-id='vblA-0' random-id='52d1eaff-f3d3-82e0-c323-6f8af98ea05e'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;brand&#92;&quot;:&#92;&quot;Alpha&#92;&quot;,&#92;&quot;price&#92;&quot;:125091.42857142857},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Beta&#92;&quot;,&#92;&quot;price&#92;&quot;:122253.66666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;CaseCo&#92;&quot;,&#92;&quot;price&#92;&quot;:114983.41666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;DeepAI&#92;&quot;,&#92;&quot;price&#92;&quot;:103704.28571428571},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Delta&#92;&quot;,&#92;&quot;price&#92;&quot;:132369.45454545456},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Gamma&#92;&quot;,&#92;&quot;price&#92;&quot;:165387.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ReadMore&#92;&quot;,&#92;&quot;price&#92;&quot;:86510.0},{&#92;&quot;brand&#92;&quot;:&#92;&quot;SoundX&#92;&quot;,&#92;&quot;price&#92;&quot;:133296.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;WorkPro&#92;&quot;,&#92;&quot;price&#92;&quot;:133715.7},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ZenTech&#92;&quot;,&#92;&quot;price&#92;&quot;:132348.18181818182}]&quot;' data-total-rows='10' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;price&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;brand&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+            "text/html": "<marimo-ui-element object-id='vblA-0' random-id='5d828111-a4d8-ab40-b2d9-50f23e121318'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;brand&#92;&quot;:&#92;&quot;Alpha&#92;&quot;,&#92;&quot;price&#92;&quot;:125091.42857142857},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Beta&#92;&quot;,&#92;&quot;price&#92;&quot;:122253.66666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;CaseCo&#92;&quot;,&#92;&quot;price&#92;&quot;:114983.41666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;DeepAI&#92;&quot;,&#92;&quot;price&#92;&quot;:103704.28571428571},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Delta&#92;&quot;,&#92;&quot;price&#92;&quot;:132369.45454545456},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Gamma&#92;&quot;,&#92;&quot;price&#92;&quot;:165387.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ReadMore&#92;&quot;,&#92;&quot;price&#92;&quot;:86510.0},{&#92;&quot;brand&#92;&quot;:&#92;&quot;SoundX&#92;&quot;,&#92;&quot;price&#92;&quot;:133296.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;WorkPro&#92;&quot;,&#92;&quot;price&#92;&quot;:133715.7},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ZenTech&#92;&quot;,&#92;&quot;price&#92;&quot;:132348.18181818182}]&quot;' data-total-rows='10' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;price&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;brand&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
           }
         }
       ],
@@ -71,7 +71,7 @@
       "console": []
     },
     {
-      "id": "PKri",
+      "id": "lEQa",
       "code_hash": "e96094fa0fc56dd17d357c588ad20d04",
       "outputs": [
         {
@@ -84,8 +84,8 @@
       "console": []
     },
     {
-      "id": "Xref",
-      "code_hash": "6334b4b2ed264c6dc034c62df6033fb0",
+      "id": "PKri",
+      "code_hash": "4fc4718402b5b8b6014cacc32dd3f92a",
       "outputs": [
         {
           "type": "data",
@@ -97,7 +97,7 @@
       "console": []
     },
     {
-      "id": "lEQa",
+      "id": "Xref",
       "code_hash": "4c39ebd38ea5c72c0152a999e222c8b4",
       "outputs": [
         {
