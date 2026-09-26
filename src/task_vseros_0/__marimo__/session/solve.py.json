@@ -1,0 +1,113 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "setup",
+      "code_hash": "5ddcdb201db41852e4840503fc5b5d22",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "7a4adbd43d0629b8d7bf22fa8845222d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "d401a5d0f67178d9e4adcbc0cf235faf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>113</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "e12ad58a401b52baad5f89f5bf6b5a41",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='vblA-0' random-id='52d1eaff-f3d3-82e0-c323-6f8af98ea05e'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;brand&#92;&quot;:&#92;&quot;Alpha&#92;&quot;,&#92;&quot;price&#92;&quot;:125091.42857142857},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Beta&#92;&quot;,&#92;&quot;price&#92;&quot;:122253.66666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;CaseCo&#92;&quot;,&#92;&quot;price&#92;&quot;:114983.41666666667},{&#92;&quot;brand&#92;&quot;:&#92;&quot;DeepAI&#92;&quot;,&#92;&quot;price&#92;&quot;:103704.28571428571},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Delta&#92;&quot;,&#92;&quot;price&#92;&quot;:132369.45454545456},{&#92;&quot;brand&#92;&quot;:&#92;&quot;Gamma&#92;&quot;,&#92;&quot;price&#92;&quot;:165387.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ReadMore&#92;&quot;,&#92;&quot;price&#92;&quot;:86510.0},{&#92;&quot;brand&#92;&quot;:&#92;&quot;SoundX&#92;&quot;,&#92;&quot;price&#92;&quot;:133296.5},{&#92;&quot;brand&#92;&quot;:&#92;&quot;WorkPro&#92;&quot;,&#92;&quot;price&#92;&quot;:133715.7},{&#92;&quot;brand&#92;&quot;:&#92;&quot;ZenTech&#92;&quot;,&#92;&quot;price&#92;&quot;:132348.18181818182}]&quot;' data-total-rows='10' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;price&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;brand&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "f0d66e09aab5901fbec7cd253b2db60f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>25</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "e96094fa0fc56dd17d357c588ad20d04",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "6334b4b2ed264c6dc034c62df6033fb0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>45</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "4c39ebd38ea5c72c0152a999e222c8b4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ol>\n<li>113</li>\n<li>Gamma</li>\n<li>25</li>\n<li>file</li>\n<li>45</li>\n</ol></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
